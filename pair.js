@@ -1,6 +1,6 @@
 const PastebinAPI = require('pastebin-js');
 const pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL');
-const { ByteID } = require('./id');
+const { princeID } = require('./id');
 const express = require('express');
 const fs = require('fs');
 let router = express.Router();
@@ -54,22 +54,22 @@ router.get('/', async (req, res) => {
                     let b64data = Buffer.from(data).toString('base64');
                     let session = await Hamza.sendMessage(Hamza.user.id, { text: 'Byte;;;' + b64data });
 
-                    let Byte_MD_TEXT = `
+                    let legend_X_TEXT = `
 ┏━━━━━━━━━━━━━━
-┃ *BYTE-MD SUCCESSFULLY LINKED*
+┃ *prince-Hacker SUCCESSFULLY LINKED*
 ┃ *WITH YOUR WHATSAPP*
 ┗━━━━━━━━━━━━━━━
-o: Creator = Hamza
+o: Creator = Hassan
 ━━━━━━━━━━━━━━━━━━
-© *TalkDrove* `;
+© *prince Hacker* `;
                     await Hamza.sendMessage(Hamza.user.id, { text: Byte_MD_TEXT }, { quoted: session });
 
                     await delay(100);
-                    await Hamza.ws.close();
+                    await prince.ws.close();
                     return await removeFile('./temp/' + id);
                 } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10000);
-                    Byte_Pair();
+                    legend_Pair();
                 }
             });
         } catch (err) {
@@ -80,7 +80,7 @@ o: Creator = Hamza
             }
         }
     }
-    return await Byte_Pair();
+    return await legend_Pair();
 });
 
 module.exports = router;
